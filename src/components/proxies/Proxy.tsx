@@ -23,7 +23,7 @@ const colorMap = {
   // orange
   bad: '#e67f3c',
   // bad: '#F56C6C',
-  na: '#909399',
+  na: '#67c23a',
 };
 
 function getLabelColor({
