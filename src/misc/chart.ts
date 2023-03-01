@@ -38,12 +38,12 @@ export const commonChartOptions: import('chart.js').ChartOptions<'line'> = {
 export const chartStyles = [
   {
     down: {
-      backgroundColor: 'rgba(176, 209, 132, 0.8)',
-      borderColor: 'rgb(176, 209, 132)',
+      backgroundColor: 'rgba(251, 138, 170, 0.8)',
+      borderColor: 'rgb(251, 138, 170)',
     },
     up: {
-      backgroundColor: 'rgba(181, 220, 231, 0.8)',
-      borderColor: 'rgb(181, 220, 231)',
+      backgroundColor: 'rgba(138, 251, 219, 0.8)',
+      borderColor: 'rgb(138, 251, 219)',
     },
   },
   {
