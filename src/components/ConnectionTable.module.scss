@@ -5,15 +5,15 @@
 }
 
 .th {
-  padding: 8px 10px;
+  padding: 3% 2px;
   height: 50px;
   background: var(--color-background);
   position: sticky;
   top: 0;
-  font-size: 0.9em;
-  text-align: center;
+  font-size: 1em;
   user-select: none;
-
+  text-align: center;
+  vertical-align: middle;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -23,10 +23,42 @@
   }
 }
 
+.thdu {
+  padding: 3% 2px;
+  height: 50px;
+  background: var(--color-background);
+  position: sticky;
+  top: 0;
+  font-size: 1em;
+  user-select: none;
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    color: var(--color-text-highlight);
+  }
+}
+
+.break {
+  word-wrap: break-word;
+  word-break: break-all;
+  align-items: center;
+  text-align: left;
+}
+
 .td {
-  padding: 8px 13px;
+  /* 上边下边 | 左边右边 */
+  padding: 10px 2px;
   font-size: 0.9em;
+  // max-width: 14em;
+  min-width: 9em;
   cursor: default;
+  align-items: center;
+  text-align: left;
+  vertical-align: middle;
   &:hover {
     color: var(--color-text-highlight);
   }
@@ -38,15 +70,16 @@
 }
 
 /* download upload td cells */
-.du {
-  text-align: right;
+.center {
+  min-width: 7em;
+  text-align: center;
 }
 
 .sortIconContainer {
-  display: inline-flex;
-  margin-left: 10px;
-  width: 16px;
-  height: 16px;
+  display: inline;
+  margin-left: 0.5em;
+  width: 1em;
+  height: 1em;
 }
 
 .rotate180 {
