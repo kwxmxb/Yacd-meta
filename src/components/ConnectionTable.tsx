@@ -89,15 +89,14 @@ function Table({ data }) {
 
             {rows.map((row, i) => {
               prepareRow(row);
-              return row.cells.map((cell, j) => {
+              return row.cells.map((cell) => {
                 return (
                   <div
                     {...cell.getCellProps()}
                     className={cx(
                       s.td,
-                      i % 2 === 0 ? s.odd : false,
-                      j == 0 || (j >= 5 && j < 10) ? s.center : true
-                      // j ==1 ? s.break : true
+                      i % 2 === 0 ? s.odd : false
+                      // j >= 6 && j < 10 ? s.du : true
                     )}
                   >
                     {renderCell(cell, locale)}

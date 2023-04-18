@@ -59,38 +59,22 @@ function hasSubstring(s: string, pat: string) {
   return s.toLowerCase().includes(pat.toLowerCase());
 }
 
-function filterConnIps(conns: FormattedConn[], ipStr: string) {
-  return conns.filter((each) => each.sourceIP === ipStr);
-}
-
-function filterConns(conns: FormattedConn[], keyword: string, sourceIp: string) {
-  let result = conns;
-  if (keyword !== '') {
-    result = conns.filter((conn) =>
-      [
-        conn.host,
-        conn.sourceIP,
-        conn.sourcePort,
-        conn.destinationIP,
-        conn.chains,
-        conn.rule,
-        conn.type,
-        conn.network,
-        conn.process,
-      ].some((field) => {
-        return hasSubstring(field, keyword);
-      })
-    );
-  }
-  if (sourceIp !== '') {
-    result = filterConnIps(result, sourceIp);
-  }
-
-  return result;
-}
-
-function getConnIpList(conns: FormattedConn[]) {
-  return Array.from(new Set(conns.map((x) => x.sourceIP))).sort();
+function filterConns(conns: FormattedConn[], keyword: string) {
+  return !keyword
+    ? conns
+    : conns.filter((conn) =>
+        [
+          conn.host,
+          conn.sourceIP,
+          conn.sourcePort,
+          conn.destinationIP,
+          conn.chains,
+          conn.rule,
+          conn.type,
+          conn.network,
+          conn.process,
+        ].some((field) => hasSubstring(field, keyword))
+      );
 }
 
 function formatConnectionDataItem(
@@ -134,15 +118,23 @@ function formatConnectionDataItem(
   };
   return ret;
 }
-
-function modifyChains(chains): string {
-  let temp;
-  if (chains.length == 1) {
-    temp = chains;
-  } else {
-    temp = chains.pop() + ' / ' + chains.shift();
+function modifyChains(chains: string[]): string {
+  if (!Array.isArray(chains) || chains.length === 0) {
+    return '';
   }
-  return temp;
+
+  if (chains.length === 1) {
+    return chains[0];
+  }
+
+  //倒序
+  if (chains.length === 2) {
+    return chains[1] + ' / ' + chains[0];
+  }
+
+  const first = chains.pop();
+  const last = chains.shift();
+  return `${first} / ${last}`;
 }
 
 function renderTableOrPlaceholder(conns: FormattedConn[]) {
