@@ -5,8 +5,10 @@
   flex-wrap: wrap;
 
   display: grid;
-  grid-template-columns: repeat(auto-fit, 180px);
+  grid-template-columns: repeat(auto-fit, 140px);
   grid-gap: 20px;
+  justify-content: space-around;
+  max-width: 1000px;
 
   .sec {
     padding: 10px;
@@ -19,7 +21,7 @@
     }
     div:nth-child(2) {
       padding: 10px 0 0;
-      font-size: 1.8em;
+      font-size: 1.3em;
     }
   }
 }

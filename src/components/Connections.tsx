@@ -59,22 +59,38 @@ function hasSubstring(s: string, pat: string) {
   return s.toLowerCase().includes(pat.toLowerCase());
 }
 
-function filterConns(conns: FormattedConn[], keyword: string) {
-  return !keyword
-    ? conns
-    : conns.filter((conn) =>
-        [
-          conn.host,
-          conn.sourceIP,
-          conn.sourcePort,
-          conn.destinationIP,
-          conn.chains,
-          conn.rule,
-          conn.type,
-          conn.network,
-          conn.process,
-        ].some((field) => hasSubstring(field, keyword))
-      );
+function filterConnIps(conns: FormattedConn[], ipStr: string) {
+  return conns.filter((each) => each.sourceIP === ipStr);
+}
+
+function filterConns(conns: FormattedConn[], keyword: string, sourceIp: string) {
+  let result = conns;
+  if (keyword !== '') {
+    result = conns.filter((conn) =>
+      [
+        conn.host,
+        conn.sourceIP,
+        conn.sourcePort,
+        conn.destinationIP,
+        conn.chains,
+        conn.rule,
+        conn.type,
+        conn.network,
+        conn.process,
+      ].some((field) => {
+        return hasSubstring(field, keyword);
+      })
+    );
+  }
+  if (sourceIp !== '') {
+    result = filterConnIps(result, sourceIp);
+  }
+
+  return result;
+}
+
+function getConnIpList(conns: FormattedConn[]) {
+  return Array.from(new Set(conns.map((x) => x.sourceIP))).sort();
 }
 
 function formatConnectionDataItem(

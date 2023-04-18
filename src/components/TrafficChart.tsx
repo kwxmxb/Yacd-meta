@@ -15,7 +15,6 @@ const chartWrapperStyle: React.CSSProperties = {
   // make chartjs chart responsive
   position: 'relative',
   maxWidth: 1000,
-  marginTop: '2em',
 };
 
 const mapState = (s: State) => ({

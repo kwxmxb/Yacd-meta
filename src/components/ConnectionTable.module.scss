@@ -5,18 +5,17 @@
 }
 
 .th {
-  padding: 4% 1%;
+  padding: 3% 2px;
   height: 50px;
   background: var(--color-background);
   position: sticky;
   top: 0;
   font-size: 1em;
   user-select: none;
-  text-align: left;
+  text-align: center;
   vertical-align: middle;
   display: flex;
   align-items: center;
-  // align-items: center;
   justify-content: space-between;
 
   &:hover {
@@ -44,22 +43,20 @@
 }
 
 .break {
-  /* 上边下边 | 左边右边 */
-  max-width: 13em;
-  min-width: 9em;
   word-wrap: break-word;
   word-break: break-all;
+  align-items: center;
+  text-align: left;
 }
 
 .td {
   /* 上边下边 | 左边右边 */
-  padding: 4% 3%;
+  padding: 10px 2px;
   font-size: 0.9em;
-  max-width: 14em;
-  min-width: 8em;
-  word-wrap: break-word;
-  word-break: break-all;
+  // max-width: 14em;
+  min-width: 9em;
   cursor: default;
+  align-items: center;
   text-align: left;
   vertical-align: middle;
   &:hover {
@@ -73,10 +70,9 @@
 }
 
 /* download upload td cells */
-.du {
-  max-width: 4em;
-  // min-width: 8em;
-  text-align: c;
+.center {
+  min-width: 7em;
+  text-align: center;
 }
 
 .sortIconContainer {
