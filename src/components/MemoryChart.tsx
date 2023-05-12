@@ -22,7 +22,7 @@ const chartWrapperStyle = {
   position: 'relative',
   width: '100%',
   height: '200px',
-  borderTop: '2px solid #424242',
+  borderTop: '2px solid #fafafa',
 };
 
 const canvasWrapperStyle = {
