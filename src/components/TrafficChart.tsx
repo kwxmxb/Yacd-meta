@@ -8,6 +8,7 @@ import useLineChart from '../hooks/useLineChart';
 import { chartJSResource, chartStyles, commonDataSetProps } from '../misc/chart';
 import { getClashAPIConfig, getSelectedChartStyleIndex } from '../store/app';
 import { connect } from './StateProvider';
+import s0 from './TrafficChart.module.scss';
 
 const { useMemo } = React;
 
@@ -23,7 +24,6 @@ const canvasWrapperStyle = {
   width: '100%',
   height: '100%',
   padding: '10px',
-  backgroundColor: 'rgb(255 255 255)',
   borderRadius: '10px',
 };
 
@@ -63,7 +63,7 @@ function TrafficChart({ apiConfig, selectedChartStyleIndex }) {
 
   return (
     <div style={chartWrapperStyle}>
-      <canvas id="trafficChart" style={canvasWrapperStyle} />
+      <canvas id="trafficChart" style={canvasWrapperStyle} className={s0.TrafficChart} />
     </div>
   );
 }
