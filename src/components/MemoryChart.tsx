@@ -29,11 +29,7 @@ const canvasWrapperStyle = {
   width: '100%',
   height: '100%',
   padding: '10px',
-<<<<<<< HEAD
-  backgroundColor: 'rgb(255 255 255)',
   borderRadius: '10px',
-=======
->>>>>>> upstream/master
 };
 
 const mapState = (s: State) => ({
