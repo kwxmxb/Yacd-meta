@@ -17,7 +17,6 @@ const chartWrapperStyle: React.CSSProperties = {
   position: 'relative',
   width: '100%',
   height: '200px',
-  borderTop: '2px solid #fafafa',
 };
 
 const canvasWrapperStyle = {
@@ -25,6 +24,7 @@ const canvasWrapperStyle = {
   height: '100%',
   padding: '10px',
   backgroundColor: 'rgb(255 255 255)',
+  borderRadius: '10px',
 };
 
 const mapState = (s: State) => ({
