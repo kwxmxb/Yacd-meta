@@ -29,7 +29,7 @@ const canvasWrapperStyle = {
   width: '100%',
   height: '100%',
   padding: '10px',
-  backgroundColor: 'rgb(26 26 26)',
+  backgroundColor: 'rgb(255 255 255)',
 };
 
 const mapState = (s: State) => ({
