@@ -17,7 +17,7 @@ const chartWrapperStyle: React.CSSProperties = {
   justifySelf: 'center',
   position: 'relative',
   width: '100%',
-  height: '200px',
+  height: '100%',
 };
 
 const canvasWrapperStyle = {
