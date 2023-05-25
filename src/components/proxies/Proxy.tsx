@@ -224,7 +224,7 @@ function ProxyImpl({
         <div className={s0.row}>
           <span
             className={s0.proxyType}
-            style={{ paddingRight: 4, opacity: 0.6, color: '#00529D' }}
+            style={{ paddingRight: 4, opacity: 0.6, color: '#00498C' }}
           >
             {formatProxyType(proxy.type)}
           </span>
