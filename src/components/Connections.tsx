@@ -230,18 +230,18 @@ const hiddenColumnsInit = savedHiddenColumns
 const columnOrder = savedColumns ? JSON.parse(savedColumns) : null;
 const columnsInit = columnOrder
   ? [...columnsOrigin].sort((pre, next) => {
-      const preIdx = columnOrder.findIndex((column) => column.accessor === pre.accessor);
-      const nextIdx = columnOrder.findIndex((column) => column.accessor === next.accessor);
+    const preIdx = columnOrder.findIndex((column) => column.accessor === pre.accessor);
+    const nextIdx = columnOrder.findIndex((column) => column.accessor === next.accessor);
 
-      if (preIdx === -1) {
-        return 1;
-      }
+    if (preIdx === -1) {
+      return 1;
+    }
 
-      if (nextIdx === -1) {
-        return -1;
-      }
-      return preIdx - nextIdx;
-    })
+    if (nextIdx === -1) {
+      return -1;
+    }
+    return preIdx - nextIdx;
+  })
   : [...columnsOrigin];
 
 function Conn({ apiConfig }) {
@@ -417,6 +417,8 @@ function Conn({ apiConfig }) {
             style={{
               height: containerHeight - paddingBottom,
               overflow: 'auto',
+              border: '2px solid #fb8aaa',
+              borderRadius: '15px',
             }}
           >
             <TabPanel>
