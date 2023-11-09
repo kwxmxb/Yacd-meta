@@ -25,8 +25,7 @@
   background-color: var(--color-bg-proxy);
 
   &.now {
-    background-color: var(--color-focus-blue);
-    color: #ddd;
+    border: 2px solid #ff286b;
   }
 
   &.error {
