@@ -412,7 +412,7 @@ function Conn({ apiConfig }) {
             onChange={(e) => setFilterSourceIpStr(e.target.value)}
           />
         </div>
-        <div ref={refContainer} style={{ padding: 30, paddingBottom: 10, paddingTop: 10 }}>
+        <div ref={refContainer} style={{ paddingRight: 30, paddingLeft: 5, paddingBottom: 10, paddingTop: 10 }}>
           <div
             style={{
               height: containerHeight - paddingBottom,

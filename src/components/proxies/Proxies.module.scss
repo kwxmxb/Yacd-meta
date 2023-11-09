@@ -32,7 +32,8 @@
 
 .group {
   padding: 10px 15px;
+
   @media (--breakpoint-not-small) {
-    padding: 10px 40px;
+    padding: 10px 25px 10px 5px;
   }
 }
