@@ -3,7 +3,7 @@ import cx from 'clsx';
 import * as React from 'react';
 import { Info } from 'react-feather';
 import { useTranslation } from 'react-i18next';
-import { FcAreaChart, FcDocument, FcGlobe, FcLink, FcRuler, FcSettings } from 'react-icons/fc';
+import { FcRatings, FcViewDetails, FcFlashOn, FcElectricalSensor, FcBrokenLink, FcSupport } from 'react-icons/fc';
 import { useQuery } from 'react-query';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -18,12 +18,12 @@ import s from './SideBar.module.scss';
 type Props = { apiConfig: ClashAPIConfig };
 
 const icons = {
-  activity: FcAreaChart,
-  globe: FcGlobe,
-  command: FcRuler,
-  file: FcDocument,
-  settings: FcSettings,
-  link: FcLink,
+  activity: FcRatings,
+  globe: FcFlashOn,
+  command: FcBrokenLink,
+  file: FcViewDetails,
+  settings: FcSupport,
+  link: FcElectricalSensor,
 };
 
 const SideBarRow = React.memo(function SideBarRow({
