@@ -15,7 +15,7 @@ const { useMemo } = React;
 
 const colorMap = {
   // green
-  good: '#f389aa',
+  good: '#ff286b',
   // yellow
   normal: '#d4b75c',
   // orange
