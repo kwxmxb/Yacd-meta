@@ -13,6 +13,7 @@
   background-size: 80px;
   background-repeat: no-repeat;
   background-position: center;
+
   @media (max-width: 768px) {
     display: none;
   }
@@ -25,6 +26,7 @@
   background-size: 80px;
   background-repeat: no-repeat;
   background-position: center;
+
   @media (max-width: 768px) {
     display: none;
   }
@@ -46,6 +48,7 @@
   display: flex;
   align-items: center;
   padding: 6px 10px;
+
   @media (--breakpoint-not-small) {
     padding: 8px 20px;
   }
@@ -69,16 +72,22 @@
 .rowActive {
   background: var(--color-sb-active-row-bg);
   color: var(--color-sb-active-row-font);
+  border-radius: 30px;
+  margin-right: 20px;
+  margin-left: 10px;
 
   @media (max-width: 768px) {
-    background: none;
+    background: var(--color-sb-active-row-bg);
     border-bottom: 2px solid var(--color-focus-blue);
+    border: none;
+    border-radius: 20px;
   }
 }
 
 .label {
   padding-left: 14px;
   font-size: 0.75em;
+
   @media (max-width: 768px) {
     padding-left: 0;
     padding-top: 5px;
@@ -117,9 +126,11 @@
   border-radius: 100%;
   border: 1px solid transparent;
 }
+
 .iconWrapper:hover {
   opacity: 0.6;
 }
+
 .iconWrapper:focus {
   border-color: var(--color-focus-blue);
 }

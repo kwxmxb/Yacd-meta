@@ -64,7 +64,7 @@
 :root {
   --font-mono: 'Roboto Mono', Menlo, monospace;
   // prettier-ignore
-  --font-normal: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",  "Source Han Sans", "PingFang SC", "Microsoft YaHei" , "微软雅黑", Arial,"Twemoji Mozilla", "_Twemoji Mozilla","Segoe UI Emoji", "Segoe UI Symbol";
+  --font-normal: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Source Han Sans", "PingFang SC", "Microsoft YaHei", "微软雅黑", Arial, "Twemoji Mozilla", "_Twemoji Mozilla", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 body {
@@ -132,8 +132,8 @@ body {
 }
 
 @mixin light {
-  --color-background: #fde0e8;
-  --color-background2: rgb(253 224 232 / 60%);
+  --color-background: #fdc4d4;
+  --color-background2: rgb(253 196 212 / 100%);
   --color-bg-chart: rgb(245, 245, 245);
   --color-bg-card: rgb(245, 245, 245);
   --color-focus-blue: #fb8aaa;
@@ -146,9 +146,11 @@ body {
   --color-bg-sidebar: #fdc4d4;
   --color-sb-active-row-bg: #fb8aaa;
   --color-sb-active-row-font: #040404;
+
   @media only screen and (min-width: 769px) {
     --color-sb-active-row-font: #eee;
   }
+
   --color-input-bg: #f0f0f0;
   --color-input-border: #c0c0c0;
   --color-toggle-bg: #ffffff80;
