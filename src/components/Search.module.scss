@@ -1,5 +1,6 @@
 .RuleSearch {
   padding: 0 40px 5px;
+
   @media (max-width: 768px) {
     padding: 0 25px 5px;
   }
@@ -8,6 +9,7 @@
 .RuleSearchContainer {
   position: relative;
   height: 40px;
+
   @media (max-width: 768px) {
     height: 30px;
   }
@@ -22,6 +24,7 @@
 }
 
 .input {
+  appearance: none;
   -webkit-appearance: none;
   background-color: var(--color-input-bg);
   background-image: none;
